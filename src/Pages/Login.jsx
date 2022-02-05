@@ -6,10 +6,10 @@ import styles from "./login.module.css"
 const Login = () => {
   return (
     <div className={styles.login}>
-      <div className="left-side">
+      <div className={styles.leftSide}>
         <Form />
       </div>
-      <div className="right-side">
+      <div className={styles.rightSide}>
         <Info />
       </div>
     </div>

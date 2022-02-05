@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Inputs from "./Inputs";
+import styles from "./form.module.css";
 
 const Form = () => {
   const initialValues = {
@@ -35,18 +36,17 @@ const Form = () => {
     enableReinitialize: true,
   });
 
-    console.log(formik.values);
   return (
     <div>
-      <div>
-        <img src="././assets/images/logo.png" />
+      <div className={styles.title}>
+        <img src="././assets/images/logo.png" width="40px" />
         <h2>Eden</h2>
       </div>
-      <div>
+      <div className={styles.welcome}>
         <h1>Hi, Welcome to Eden! </h1>
         <p>Start your 7-day free trial</p>
       </div>
-      <form onSubmit={formik.handleSubmit} className="">
+      <form onSubmit={formik.handleSubmit}>
         <Inputs
           formik={formik}
           name="name"
@@ -65,18 +65,27 @@ const Form = () => {
           label="Password"
           placeholder="at least 8 characters"
         />
-
-        <button type="submit" className="">
-          Get Started
-        </button>
-
-        <input
-          type="checkbox"
-          name="terms"
-          value={formik.values.terms}
-          onChange={formik.handleChange}
-          checked={formik.values.terms}
-        />
+        <div>
+          <button type="submit" className="">
+            Get Started
+          </button>
+        </div>
+        <div className={styles.checkBox}>
+          <input
+            type="checkbox"
+            name="terms"
+            value={formik.values.terms}
+            onChange={formik.handleChange}
+            checked={formik.values.terms}
+          />
+                  <label>I agree to the Terms & Conditions</label>
+        </div>
+                  {formik.errors.terms && formik.touched.terms && (
+                      <div className={styles.error}>{formik.errors.terms}</div>
+                  )}
+        <div className={styles.link}>
+          <a href="#">Are you already member? </a>
+        </div>
       </form>
     </div>
   );

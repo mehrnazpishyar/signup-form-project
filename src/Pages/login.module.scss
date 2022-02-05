@@ -3,3 +3,27 @@
     display: flex;
     justify-content: space-around;
 }
+
+.rightSide{
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(to right, #664de7, #513db8);
+    text-align: center;
+    padding-top: 60px;
+}
+
+.leftSide{
+    width: 50%;
+    height: 100vh;
+    padding:40px 100px;
+}
+
+
+@media (max-width:850px) {
+    .rightSide{
+        display: none;
+    }
+    .leftSide{
+        width: 100%;
+    }
+}
