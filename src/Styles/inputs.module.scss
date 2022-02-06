@@ -1,0 +1,26 @@
+@import "./variables";
+
+input {
+  @include input-ButtonStyle();
+  border: 1px solid $inputColor;
+  margin: 5px 0 10px 0;
+}
+
+label {
+  @include fontStyle(13px, 500);
+  color: $dark-grayColor;
+}
+
+::placeholder {
+  color: $light-grayColor2;
+}
+
+.errors {
+  color: $redColor;
+  @include fontStyle(13px, 500);
+}
+
+.errorFlex {
+  display: flex;
+  justify-content: space-between;
+}

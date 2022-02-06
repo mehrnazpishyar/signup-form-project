@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Inputs from "./Inputs";
-import styles from "./form.module.css";
+import styles from "../Styles/form.module.css";
 
 const Form = () => {
   const initialValues = {
@@ -36,10 +36,12 @@ const Form = () => {
     enableReinitialize: true,
   });
 
+  console.log(formik.isValid)
+
   return (
     <div>
       <div className={styles.title}>
-        <img src="././assets/images/logo.png" width="40px" />
+        <img src="././assets/images/logo.png" width="30px" alt="logo"/>
         <h2>Eden</h2>
       </div>
       <div className={styles.welcome}>
@@ -65,11 +67,11 @@ const Form = () => {
           label="Password"
           placeholder="at least 8 characters"
         />
-        <div>
-          <button type="submit" className="">
-            Get Started
-          </button>
-        </div>
+
+        <button type="submit" disabled={!formik.isValid}>
+          Get Started
+        </button>
+
         <div className={styles.checkBox}>
           <input
             type="checkbox"
@@ -78,11 +80,11 @@ const Form = () => {
             onChange={formik.handleChange}
             checked={formik.values.terms}
           />
-                  <label>I agree to the Terms & Conditions</label>
+          <label>I agree to the Terms & Conditions</label>
         </div>
-                  {formik.errors.terms && formik.touched.terms && (
-                      <div className={styles.error}>{formik.errors.terms}</div>
-                  )}
+        {formik.errors.terms && formik.touched.terms && (
+          <div className={styles.error}>{formik.errors.terms}</div>
+        )}
         <div className={styles.link}>
           <a href="#">Are you already member? </a>
         </div>

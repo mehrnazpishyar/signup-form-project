@@ -1,0 +1,13 @@
+@import "./variables";
+
+.info {
+  h2 {
+    padding: 50px 0 10px 0px;
+    color: $whiteColor;
+  }
+
+  p {
+    color: $whiteColor;
+    font-size: 14px;
+  }
+}

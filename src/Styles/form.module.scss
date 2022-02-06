@@ -1,0 +1,68 @@
+@import "./variables";
+
+.title {
+  display: flex;
+
+  h2 {
+    padding: 5px 0 0 5px;
+  }
+}
+
+.welcome {
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    padding-top: 8px;
+    color: $light-grayColor;
+    font-size: 13px;
+  }
+}
+
+button {
+  @include input-ButtonStyle();
+  border: 1px solid $light-grayColor;
+  margin: 15px 0 10px 0;
+  background: $light-purpleColor;
+  color: $whiteColor;
+  cursor: pointer;
+
+  
+}
+
+button[disabled] {
+ opacity: 0.5;
+
+}
+
+input[type="checkbox"] {
+  @include widthHeight(16px, 16px);
+  filter: hue-rotate(30deg);
+  cursor: pointer;
+}
+
+.checkBox {
+  display: flex;
+
+  label {
+    padding: 5px 0 0 10px;
+  }
+}
+
+.error {
+  color: $redColor;
+  @include fontStyle(14px, 500);
+}
+
+.link {
+  margin-top: 30px;
+
+  a {
+    text-decoration: none;
+    color: $dark-grayColor;
+    @include fontStyle(12px, 500);
+  }
+}

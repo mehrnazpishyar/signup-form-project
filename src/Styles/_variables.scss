@@ -1,0 +1,27 @@
+$whiteColor: #fff;
+$redColor: #dc143c;
+$light-grayColor: #666a6d;
+$light-grayColor2: #babec1;
+$inputColor: #e7e4e4;
+$dark-grayColor: #42454a;
+$light-purpleColor: #664de7;
+$dark-purpleColor: #513db8;
+
+$mobile: 1100px;
+
+@mixin fontStyle($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin input-ButtonStyle {
+  padding: 9px;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}

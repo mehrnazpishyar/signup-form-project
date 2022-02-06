@@ -1,9 +1,9 @@
 import React from "react";
 import Form from "../Components/Form";
 import Info from "../Components/Info";
-import styles from "./login.module.css"
+import styles from "../Styles/login.module.css";
 
-const Login = () => {
+const SignUpForm = () => {
   return (
     <div className={styles.login}>
       <div className={styles.leftSide}>
@@ -16,4 +16,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUpForm;

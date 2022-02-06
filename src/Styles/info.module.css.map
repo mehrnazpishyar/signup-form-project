@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACE,KADG,CACH,EAAE,CAAC;EACD,OAAO,EAAE,eAAe;EACxB,KAAK,ECLI,IAAI;CDMd;;AAJH,AAME,KANG,CAMH,CAAC,CAAC;EACA,KAAK,ECTI,IAAI;EDUb,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "info.module.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "info.module.css"
+}

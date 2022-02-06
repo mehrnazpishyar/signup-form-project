@@ -5,36 +5,43 @@
 }
 
 .title h2 {
-  font-size: 1.8rem;
   padding: 5px 0 0 5px;
 }
 
 .welcome {
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
+}
+
+.welcome h1 {
+  font-size: 1.5rem;
 }
 
 .welcome p {
   padding-top: 8px;
   color: #666a6d;
-  font-weight: 500;
+  font-size: 13px;
 }
 
 button {
-  padding: 12px;
+  padding: 9px;
   display: block;
   width: 100%;
   border-radius: 4px;
-  border: 1px solid #e0e0e0 !important;
-  margin: 20px 0 20px 0;
+  border: 1px solid #666a6d;
+  margin: 15px 0 10px 0;
   background: #664de7;
   color: #fff;
   cursor: pointer;
 }
 
+button[disabled] {
+  opacity: 0.5;
+}
+
 input[type="checkbox"] {
-  height: 18px;
-  width: 18px;
+  width: 16px;
+  height: 16px;
   -webkit-filter: hue-rotate(30deg);
           filter: hue-rotate(30deg);
   cursor: pointer;
@@ -63,7 +70,7 @@ input[type="checkbox"] {
 .link a {
   text-decoration: none;
   color: #42454a;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
 }
 /*# sourceMappingURL=form.module.css.map */
